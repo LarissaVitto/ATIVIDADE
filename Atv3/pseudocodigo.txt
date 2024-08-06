@@ -1,0 +1,58 @@
+algoritmo "como fazer mingau"
+
+boolean panela = 0 , copo = 0 , colher = 0, litro_de_leite = 1, acucar = 1, amido_de_milho = 1
+int contador = 0
+
+inicio
+	vá ao armário
+	abra o armário
+	pegue uma panela 
+	pegue um copo
+	coloque a panela sobre a mesa
+	coloque o copo sobre a mesa
+	vá até a geladeira
+	abra a porta da geladeira
+	pegue um litro de leite
+	feche a porta da geladeira
+	abra o leite
+	se(contador >2)então{
+		encha o copo com leite
+		copo = 1
+		despeje o copo de leite na panela
+		copo = 0, contador++
+	}
+	contador = 0
+	coloque o leite sobre a mesa
+	vá ao armário
+	abra uma gaveta
+	pegue uma colher
+	feche a gaveta
+	abra o armário
+	pegue o acucar
+	pegue o amido_de_milho
+	feche o armário
+	coloque o acucar sobre a mesa
+	coloque o amido_de_milho sobre a mesa
+	abra o acucar
+	se(contador >4)então{
+		encha a colher com acucar
+		colher = 1
+		despeje na panela
+		colher = 0, contador++
+	}
+	contador = 0
+	feche o acucar
+	abra o amido_de_milho
+	se(contador >4)então{
+		encha a colher com amido_de_milho
+		colher = 1
+		despeje na panela
+		colher = 0, contador++
+	}
+	misture todo o conteudo da panela com a colher
+	coloque a panela no fogão
+	ligue o fogo do fogão no médio
+	misture até o mingau não grudar no fundo
+	desligue o fogo
+	deixe esfriar
+fim
