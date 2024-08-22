@@ -4,7 +4,7 @@ double SUBTRACAO(double a, double b);
 double MULTIPLICACAO(double a, double b);
 double DIVISAO(double a, double b);
 double POTENCIACAO(double a, double b);
-//double RAIZ(double a);
+double RAIZ(double a);
 int FATORIAL(int a);
 int MDC(int a, int b);
 /*int MMC(int a, int b);
@@ -71,12 +71,14 @@ int main() {
         {   
             printf("Digite o numero: ");
             scanf("%lf", &a);
-                /*if(RESULTADO < 0){
-                 printf("A Raiz nao existe, digite outro numero")
-                }else{
-                    printf("Resultado: %.5lf\n",RAIZ(a, b));
-                } */
-        }  
+            if(a < 0){
+                printf("A Raiz nao existe.\n");
+            }
+            else
+            {
+                printf("Resultado: %.5lf\n",RAIZ(a));
+            } 
+        }
         if (contador == 7)
         {   
             printf("Digite o numero: ");
@@ -146,7 +148,23 @@ double POTENCIACAO(double a, double b){
     RESULTADO *= a ;
    };
     return (RESULTADO);
-}/*
+}
+double RAIZ(double a) {
+    double RESULTADO = a;         
+    double precisao = 0.0001; 
+    double diferenca;
+
+    do {
+        double RaizAnterior = RESULTADO;
+        RESULTADO = (RESULTADO + a / RESULTADO) / 2.0;
+        diferenca = RESULTADO - RaizAnterior;
+        if (diferenca < 0) {
+            diferenca = -diferenca;
+        }
+    } while (diferenca > precisao); 
+    return (RESULTADO);
+}
+/*
 double RAIZ(double a){
     double RESULTADO = 0.00;
     arrumaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -170,16 +188,7 @@ int MDC(int a, int b){
         while((a % b) > 0){
         RESULTADO = a % b;
         a = b;
-        b = RESULTADO;
-        }else
-        {
-            while((b % a) > 0)
-            {
-                //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                RESULTADO = b % a;
-                b = a;
-                a = RESULTADO;
-            }
+        b = RESULTADO;//aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
         }
     }
     
