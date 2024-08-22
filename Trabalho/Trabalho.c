@@ -164,12 +164,6 @@ double RAIZ(double a) {
     } while (diferenca > precisao); 
     return (RESULTADO);
 }
-/*
-double RAIZ(double a){
-    double RESULTADO = 0.00;
-    arrumaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-    return (RESULTADO);
-}*/
 int FATORIAL(int a){
     int RESULTADO = 0;
     int contando = a, aa = a - 1;
