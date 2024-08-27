@@ -47,7 +47,7 @@ int main() {
             scanf("%lf", &a);
             printf("Digite o segundo numero: ");
             scanf("%lf", &b);
-            if( a == 0|| b == 0){
+            if(b == 0){
                 printf("Resultado indefinido");
             }else{
                 printf("Resultado: %.5lf\n",DIVISAO(a, b));
