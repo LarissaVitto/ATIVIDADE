@@ -48,7 +48,7 @@ int main() {
             printf("Digite o segundo numero: ");
             scanf("%lf", &b);
             if(b == 0){
-                printf("Resultado indefinido");
+                printf("Resultado indefinido\n");
             }else{
                 printf("Resultado: %.5lf\n",DIVISAO(a, b));
             }
@@ -116,10 +116,9 @@ int main() {
             scanf("%lf", &c);
             if (a == 0)
             {
-                printf("Nao e uma equacao de segundo grau");
+                printf("Nao e uma equacao de segundo grau\n");
             }else{
                 EQUACAO(a, b, c);
-
             }            
         }            
     } while (contador != 0);
@@ -202,7 +201,11 @@ double EQUACAO(double a, double b, double c){
     RAIZZ = RAIZ(DELTA);
     RESULTADO = (-b + RAIZZ) / 2 * a;
     RESULTADO2 = (-b - RAIZZ) / 2 * a;
-    printf("Resultados: %.5lf, %5lf\n", RESULTADO, RESULTADO2);
+    if(RESULTADO < 0 || RESULTADO2 < 0){
+        printf("Resultado nao existe (resultado negativo)");
+    }else{
+        printf("Resultados: %.5lf, %5lf\n", RESULTADO, RESULTADO2);
+    }
     return 0;
 }
 
