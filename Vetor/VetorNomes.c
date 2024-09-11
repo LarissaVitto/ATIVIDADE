@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    char nome[5]; 
+    char nome[30]; 
     char nomeA[30] = "Fulano";
     char nomeB[30] = {'F', 'U', 'L', 'A', 'N', 'O'};
     char nomeC[] = "Fulano"; 
