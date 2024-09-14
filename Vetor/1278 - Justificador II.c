@@ -1,66 +1,65 @@
 #include <stdio.h>
 
 int main() {
-    int linhas;
-    
-    while (1) {
-        scanf("%d", &linhas);
-        if (linhas == 0) break;
+    int N, i, j, len, max_len;
 
-        char texto[100][51];
-        int maior_tamanho = 0;
+    while (scanf("%d", &N) && N != 0) {
+        getchar();  
+        char linhas[N][51];
+        max_len = 0;
 
-        for (int i = 0; i < linhas; i++) {
-            int caractere, flag_palavra = 0;
-            char aux[51];
-            int aux_tamanho = 0;
+        for (i = 0; i < N; i++) {
+            len = 0;
+            int espaco_encontrado = 0;
 
-            getchar();  
             
-            while ((caractere = getchar()) != '\n') {
-                if (caractere == ' ') {
-                    if (flag_palavra) {
-                        aux[aux_tamanho++] = ' ';
-                        flag_palavra = 0;
+            while (1) {
+                char c = getchar();
+                if (c == '\n') break;
+                if (c == ' ') {
+                    if (!espaco_encontrado && len > 0) {
+                        linhas[i][len++] = c;
+                        espaco_encontrado = 1;
                     }
                 } else {
-                    aux[aux_tamanho++] = caractere;  
-                    flag_palavra = 1;
+                    linhas[i][len++] = c;
+                    espaco_encontrado = 0;
                 }
             }
 
-            if (aux_tamanho > 0 && aux[aux_tamanho - 1] == ' ') {
-                aux_tamanho--;
+            
+            if (linhas[i][len - 1] == ' ') {
+                len--;
             }
 
-            for (int j = 0; j < aux_tamanho; j++) {
-                texto[i][j] = aux[j];
-            }
-            texto[i][aux_tamanho] = '\0'; 
+            linhas[i][len] = '\0';
 
-            if (aux_tamanho > maior_tamanho) {
-                maior_tamanho = aux_tamanho;
+            if (len > max_len) {
+                max_len = len;
             }
         }
 
-        for (int i = 0; i < linhas; i++) {
-            int tam_linha = 0;
-            while (texto[i][tam_linha] != '\0') {
-                tam_linha++;
+        
+        for (i = 0; i < N; i++) {
+            len = 0;
+            while (linhas[i][len] != '\0') {
+                len++;
             }
 
-            for (int j = 0; j < maior_tamanho - tam_linha; j++) {
+            int espacos = max_len - len;
+
+            for (j = 0; j < espacos; j++) {
                 putchar(' ');
             }
 
-            for (int j = 0; j < tam_linha; j++) {
-                putchar(texto[i][j]);
+            for (j = 0; j < len; j++) {
+                putchar(linhas[i][j]);
             }
 
             putchar('\n');
         }
 
-        putchar('\n');
+        putchar('\n');  
     }
 
     return 0;

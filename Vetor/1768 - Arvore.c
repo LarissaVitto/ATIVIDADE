@@ -1,43 +1,37 @@
 #include <stdio.h>
 
-void arvore(int altura) {
-    int linha, espaco;
+int main() {
+    int tamanho;
 
-    for (linha = 1; linha <= altura; linha += 2) {
-        for (espaco = (altura - linha) / 2; espaco > 0; espaco--) {
-            printf(" ");
+    while (scanf("%d", &tamanho) != EOF) {
+        if (tamanho % 2 == 0 || tamanho <= 2 || tamanho >= 100) {
+            continue;
         }
-        for (espaco = 0; espaco < linha; espaco++) {
-            printf("*");
-        }
-        printf("\n");
-    }
 
-    for (linha = 0; linha < 2; linha++) {
-        for (espaco = (altura - 3) / 2; espaco > 0; espaco--) {
-            printf(" ");
+        int meio = (tamanho / 2);
+
+        for (int i = 0; i <= meio; i++) {
+            for (int j = 0; j < meio - i; j++) {
+                putchar(' ');
+            }
+            for (int j = 0; j < 2 * i + 1; j++) {
+                putchar('*');
+            }
+            putchar('\n');
+        }
+
+        for (int i = 0; i < meio; i++) {
+            putchar(' ');
         }
         printf("***\n");
-    }
 
-    for (linha = 0; linha < 1; linha++) {
-        for (espaco = (altura - 1) / 2; espaco > 0; espaco--) {
-            printf(" ");
+        for (int i = 0; i < meio; i++) {
+            putchar(' ');
         }
         printf("*\n");
-    }
-}
 
-int main() {
-    int altura;
-
-    while (scanf("%d", &altura) != EOF) {
-        if (altura > 2 && altura < 100 && altura % 2 == 1) {
-            arvore(altura);
-        }
-        printf("\n");
+        putchar('\n');
     }
 
     return 0;
 }
-
