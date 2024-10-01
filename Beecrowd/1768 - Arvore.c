@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int main() {
     int tamanho;
 
@@ -19,19 +18,18 @@ int main() {
             }
             putchar('\n');
         }
+        for (int i = 0; i < meio; i++) {
+            putchar(' ');
+        }
+        printf("*\n");
+        
+        meio = meio - 1;
 
         for (int i = 0; i < meio; i++) {
             putchar(' ');
         }
         printf("***\n");
-
-        for (int i = 0; i < meio; i++) {
-            putchar(' ');
-        }
-        printf("*\n");
-
-        putchar('\n');
+        printf("\n");
     }
-
     return 0;
 }
