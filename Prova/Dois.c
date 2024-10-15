@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <stdio.h>
 int main(){
     int M = 1, N = 1, SOMA = 0, MENOR, MAIOR;
@@ -21,4 +22,3 @@ int main(){
         SOMA = 0;
     }
     return 0;
-}
