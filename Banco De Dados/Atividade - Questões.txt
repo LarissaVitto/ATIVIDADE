@@ -1,0 +1,9 @@
+Q1- Banco de dados é um local no computador, nuvem ou servidor onde são guardadas diversas informações e registros relacionados ou não sobre coisas iguais ou diferentes, ele permite esses dados serem gerenciados de forma mais fácil
+
+Q2- Um dado é algo que sozinho pode não ser compreendido corretamente, mas com informações sobre esse dado fica mais simples a compreensão, ex: Copag, Baralho de cartas da Copag.
+
+Q3- A função de um SGBD é gerenciar o Banco de dados, tendo como vantagem manipular o BD com maior facilidade, podendo "programar" e editar o BD por meio da ferramenta, e as desvantagens podem ser erros humanos, por não dar tanta importância ao BD na hora de cria-los acarretando em travamentos no futuro, quando ele estiver maior 
+
+Q4- O BD relacional funciona por meio de relações onde os dados ficam armazenados em tabelas, com colunas e linhas onde fica com sua leitura mais clara e objetiva, já nos não-relacionais são alocados por pastas podendo-se definir um esquema personalizado e exibidos em formas de texto.
+
+Q5- Tabela de Funcionário e Cliente, onde o Funcionário Vende algum produto para o Cliente, o cadastro do Funcionário tem seu nome, CPF, total de vendas e carteira de trabalho, já o cadastro do Cliente teria seu nome, CPF e suas compras feitas na loja.
