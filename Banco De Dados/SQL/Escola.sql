@@ -24,9 +24,9 @@ INSERT INTO professor (telefone_professor, cpf_professor, nome_professor, data_n
 INSERT INTO professor (telefone_professor, cpf_professor, nome_professor, data_nasc_professor, endereco_professor) VALUES (92222229999, 1119897311, 'Luana', '2000-06-06', 'Dois Vizinhos');
 INSERT INTO professor (telefone_professor, cpf_professor, nome_professor, data_nasc_professor, endereco_professor) VALUES (99999999999, 1111111111, 'João', '1930-03-03', 'Dois Vizinhos');
 
-INSERT INTO disciplina (nome_disciplina) VALUES ('matemática');
-INSERT INTO disciplina (nome_disciplina) VALUES ('química');
-INSERT INTO disciplina (nome_disciplina) VALUES ('física');
-INSERT INTO disciplina (nome_disciplina) VALUES ('português');
-INSERT INTO disciplina (nome_disciplina) VALUES ('redação');
+INSERT INTO disciplina (nome_disciplina, matricula_idfk) VALUES ('matemática', 1);
+INSERT INTO disciplina (nome_disciplina, matricula_idfk) VALUES ('química', 2);
+INSERT INTO disciplina (nome_disciplina, matricula_idfk) VALUES ('física', 3);
+INSERT INTO disciplina (nome_disciplina, matricula_idfk) VALUES ('português', 4);
+INSERT INTO disciplina (nome_disciplina, matricula_idfk) VALUES ('redação', 5);
 
